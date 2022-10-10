@@ -1,12 +1,12 @@
-from person import Person
+from professor import Professor
+from student import Student
 
 ## EXO 1
 persons = []
-persons.append(Person("deschamps", "ghislain", "france"))
-persons.append(Person("bejenne", "nicolas", "deutschland"))
-persons.append(Person("grossard", "romain", "italy"))
-persons.append(Person("bernard", "junior", "chinese"))
+persons.append(Professor("deschamps", "ghislain", "france", "MVMS", ["AMVS"]))
+persons.append(Professor("bejenne", "nicolas", "deutschland", "MVMS", ["CDiscount", "CPEMG"]))
+persons.append(Student("grossard", "romain", "italy", "UPHF"))
+persons.append(Student("bernard", "junior", "chinese", None, ["Branleur"]))
+persons.append(Student("euillot", "aurélien", "france"))
 
 for person in persons: print(person)
-
-## EXO 2

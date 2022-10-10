@@ -6,7 +6,6 @@ class Person:
     self.lastname = lastname
     self.firstname = firstname
     self.country = country
-    
     self._id = self.__class__.id
     self.__class__.id += 1
   
@@ -41,7 +40,7 @@ class Person:
     return f"{self.lastname} {self.firstname}"
     
   def __str__(self) -> str:
-    msg = f"#{self._id} : {self.fullname()}"
-    msg += f"et son pays est : {self.country}" if self.country else ""
+    msg = f"{self.__class__.__name__}#{self._id} : {self.fullname()}"
+    msg += f" et son pays est : {self.country}." if self.country else "."
     return msg
 
